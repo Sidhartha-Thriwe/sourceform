@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <div class="banner bg-cover bg-center h-48" style="background-image: url('https://i.postimg.cc/Wb2R8KDK/wine-glasses-set-table-part-inviting-dinner-setting.jpg');"></div>
+            <form id="mainForm" class="p-6">
+                <div class="section" id="clientDetails">
+                    <h2 class="section-title">Client Details</h2>
+                    <div class="section-content">
+                        <div class="mb-4">
+                            <label for="legalName" class="block mb-2">Legal Name*</label>
+                            <input type="text" id="legalName" name="legalName" required class="w-full p-2 border rounded">
+                        </div>
+                        <div class="mb-4">
+                            <label for="pocName" class="block mb-2">POC Name*</label>
+                            <input type="text" id="pocName" name="pocName" required class="w-full p-2 border rounded">
+                        </div>
+                        <div class="mb-4">
+                            <label for="pocContact" class="block mb-2">POC Contact*</label>
+                            <input type="text" id="pocContact" name="pocContact" required class="w-full p-2 border rounded">
+                        </div>
+                        <div class="mb-4">
+                            <label for="pocEmail" class="block mb-2">POC Email*</label>
+                            <input type="email" id="pocEmail" name="pocEmail" required class="w-full p-2 border rounded">
+                        </div>
+                        <div class="mb-4">
+                            <label for="industry" class="block mb-2">Industry*</label>
+                            <select id="industry" name="industry" required class="w-full p-2 border rounded">
+                                <option value="">Select an industry</option>
+                                <option value="Bank">Bank</option>
+                                <option value="Fintech">Fintech</option>
+                                <option value="Automobile">Automobile</option>
+                                <option value="Consumer Durables">Consumer Durables</option>
+                                <option value="Channel Loyalty">Channel Loyalty</option>
+                                <option value="Real Estate">Real Estate</option>
+                                <option value="Power Utility">Power Utility</option>
+                                <option value="Insurance">Insurance</option>
+                                <option value="Restaurant">Restaurant</option>
+                                <option value="QSR">QSR</option>
+                                <option value="Education">Education</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="companySize" class="block mb-2">Company's size</label>
+                            <select id="companySize" name="companySize" class="w-full p-2 border rounded">
+                                <option value="">Select company size</option>
+                                <option value="1 to 1000">1 to 1000 employees</option>
+                                <option value="1000 to 5000">1000 to 5000 employees</option>
+                                <option value="5000 to 10000">5000 to 10000 employees</option>
+                                <option value="10000+">10000 +</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block mb-2">Company's Country*</label>
+                            <div>
+                                <label class="inline-flex items-center mr-4">
+                                    <input type="checkbox" name="companyCountry" value="India" checked class="form-checkbox">
+                                    <span class="ml-2">India</span>
+                                </label>
+                                <label class="inline-flex items-center mr-4">
+                                    <input type="checkbox" name="companyCountry" value="Saudi Arabia" class="form-checkbox">
+                                    <span class="ml-2">Saudi Arabia</span>
+                                </label>
+                                <label class="inline-flex items-center mr-4">
+                                    <input type="checkbox" name="companyCountry" value="Dubai" class="form-checkbox">
+                                    <span class="ml-2">Dubai</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="companyCountry" value="Singapore" class="form-checkbox">
+                                    <span class="ml-2">Singapore</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section" id="functionality">
+    <h2 class="section-title">Functionality</h2>
+    <div class="section-content hidden">
+        <div class="mb-4">
+            <label for="customerIdentification" class="block mb-2">Customer Identification*</label>
+            <select id="customerIdentification" name="customerIdentification" required class="w-full p-2 border rounded">
+                <option value="">Select identification method</option>
+                <option value="Membership ID">Membership ID</option>
+                <option value="Client Provided ID">Client Provided ID</option>
+                <option value="BIN" selected>BIN</option>
+                <option value="Mobile Number">Mobile Number</option>
+                <option value="Email Id">Email Id</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label class="block mb-2">Domain requirement*</label>
+            <div>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="domainRequirement" value="Thriwe domain" checked class="form-radio">
+                    <span class="ml-2">Thriwe domain</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="domainRequirement" value="Client's domain (owned by the client)" class="form-radio">
+                    <span class="ml-2">Client's domain (owned by the client)</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="domainRequirement" value="Client's domain (to be purchased)" class="form-radio">
+                    <span class="ml-2">Client's domain (to be purchased)</span>
+                </label>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block mb-2">Hosting server*</label>
+            <div>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="hostingServer" value="Thriwe servers" checked class="form-radio">
+                    <span class="ml-2">Thriwe servers</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="hostingServer" value="Client's servers" class="form-radio">
+                    <span class="ml-2">Client's servers</span>
+                </label>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block mb-2">Communication channels*</label>
+            <div>
+                <label class="inline-flex items-center mr-4">
+                    <input type="checkbox" name="communicationChannels" value="Email" class="form-checkbox">
+                    <span class="ml-2">Email</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="checkbox" name="communicationChannels" value="SMS" checked class="form-checkbox">
+                    <span class="ml-2">SMS</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="communicationChannels" value="Whatsapp" class="form-checkbox">
+                    <span class="ml-2">Whatsapp</span>
+                </label>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label for="userAccountTenure" class="block mb-2">User account tenure*</label>
+            <select id="userAccountTenure" name="userAccountTenure" required class="w-full p-2 border rounded">
+                <option value="">Select account tenure</option>
+                <option value="3 months">3 months</option>
+                <option value="6 months">6 months</option>
+                <option value="1 Year" selected>1 Year</option>
+                <option value="2 Year">2 Year</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="userBenefitAccessValidity" class="block mb-2">User benefit access validity*</label>
+            <select id="userBenefitAccessValidity" name="userBenefitAccessValidity" required class="w-full p-2 border rounded">
+                <option value="">Select benefit access validity</option>
+                <option value="3 months">3 months</option>
+                <option value="6 months">6 months</option>
+                <option value="1 Year" selected>1 Year</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label class="block mb-2">Authentication required*</label>
+            <div>
+                <label class="inline-flex items-center mr-4">
+                    <input type="checkbox" name="authenticationRequired" value="SSO" class="form-checkbox">
+                    <span class="ml-2">SSO</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="checkbox" name="authenticationRequired" value="Thriwe SFTP" class="form-checkbox">
+                    <span class="ml-2">Thriwe SFTP</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="checkbox" name="authenticationRequired" value="Client SFTP" class="form-checkbox">
+                    <span class="ml-2">Client SFTP</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="checkbox" name="authenticationRequired" value="Pre Auth on Registration" checked class="form-checkbox">
+                    <span class="ml-2">Pre Auth on Registration</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="authenticationRequired" value="Pre Auth on Booking" class="form-checkbox">
+                    <span class="ml-2">Pre Auth on Booking</span>
+                </label>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label for="dataPurging" class="block mb-2">Data Purging*</label>
+            <select id="dataPurging" name="dataPurging" required class="w-full p-2 border rounded">
+                <option value="">Select data purging option</option>
+                <option value="1 week">1 week</option>
+                <option value="1 month">1 month</option>
+                <option value="1 year">1 year</option>
+                <option value="Never" selected>Never</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="uploadBenefitPack" class="block mb-2">Upload benefit pack/offer requirements*</label>
+            <input type="file" id="uploadBenefitPack" name="uploadBenefitPack" required class="w-full p-2 border rounded">
+            <a href="Thiwe - Scoping sample file.xlsx" class="text-blue-500 hover:underline">Download sample file</a>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="customerServiceRequirement">
+    <h2 class="section-title">Customer Service Requirement</h2>
+    <div class="section-content hidden">
+        <div class="mb-4">
+            <label class="block mb-2">Required platforms*</label>
+            <div>
+                <label class="inline-flex items-center mr-4">
+                    <input type="checkbox" name="requiredPlatforms" value="Email" class="form-checkbox">
+                    <span class="ml-2">Email</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="checkbox" name="requiredPlatforms" value="SMS" class="form-checkbox">
+                    <span class="ml-2">SMS</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="checkbox" name="requiredPlatforms" value="Whatsapp" class="form-checkbox">
+                    <span class="ml-2">Whatsapp</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="checkbox" name="requiredPlatforms" value="Not required" checked class="form-checkbox">
+                    <span class="ml-2">Not required</span>
+                </label>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block mb-2">Operational hours*</label>
+            <div>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="operationalHours" value="10:00 am to 6:00 pm" class="form-radio">
+                    <span class="ml-2">10:00 am to 6:00 pm</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="operationalHours" value="24 x 7" class="form-radio">
+                    <span class="ml-2">24 x 7</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="operationalHours" value="Not required" checked class="form-radio">
+                    <span class="ml-2">Not required</span>
+                </label>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block mb-2">Operational days*</label>
+            <div>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="operationalDays" value="Mon to Fri" class="form-radio">
+                    <span class="ml-2">Mon to Fri</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="operationalDays" value="Mon to Sun" class="form-radio">
+                    <span class="ml-2">Mon to Sun</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="operationalDays" value="Not required" checked class="form-radio">
+                    <span class="ml-2">Not required</span>
+                </label>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block mb-2">SLA expectation*</label>
+            <div>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="slaExpectation" value="24 to 48 hours" class="form-radio">
+                    <span class="ml-2">24 to 48 hours</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="slaExpectation" value="1 week" class="form-radio">
+                    <span class="ml-2">1 week</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="slaExpectation" value="Not required" checked class="form-radio">
+                    <span class="ml-2">Not required</span>
+                </label>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block mb-2">Required reports*</label>
+            <div>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="requiredReports" value="Default reports" class="form-radio">
+                    <span class="ml-2">Default reports</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="requiredReports" value="Custom report" class="form-radio">
+                    <span class="ml-2">Custom report</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="requiredReports" value="Not required" checked class="form-radio">
+                    <span class="ml-2">Not required</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section" id="commercials">
+    <h2 class="section-title">Commercials</h2>
+    <div class="section-content hidden">
+        <div class="mb-4">
+            <label for="perPassCost" class="block mb-2">Per pass cost</label>
+            <input type="text" id="perPassCost" name="perPassCost" class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+            <label for="totalMOQ" class="block mb-2">Total MOQ</label>
+            <input type="text" id="totalMOQ" name="totalMOQ" class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+            <label for="totalProgramValue" class="block mb-2">Total Program value</label>
+            <input type="text" id="totalProgramValue" name="totalProgramValue" class="w-full p-2 border rounded">
+        </div>
+        <div class="mb-4">
+            <label class="block mb-2">Expected utilization*</label>
+            <div>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="expectedUtilization" value="20%" checked class="form-radio">
+                    <span class="ml-2">20%</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="expectedUtilization" value="40%" class="form-radio">
+                    <span class="ml-2">40%</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="expectedUtilization" value="60%" class="form-radio">
+                    <span class="ml-2">60%</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="expectedUtilization" value="80%" class="form-radio">
+                    <span class="ml-2">80%</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="expectedUtilization" value="100%" class="form-radio">
+                    <span class="ml-2">100%</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
