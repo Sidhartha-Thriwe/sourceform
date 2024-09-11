@@ -1,8 +1,9 @@
 /* Custom styles to complement Tailwind CSS */
 body {
+    font-family: 'Work Sans', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .section {
@@ -77,10 +78,6 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-.form-label {
-    font-weight: bold;
-}
-
 .form-group {
     margin-bottom: 1rem;
 }
@@ -93,7 +90,7 @@ button[type="submit"] {
 
 @media (max-width: 640px) {
     body {
-        font-size: 14px;
+        font-size: 10px;
     }
 
     .container {
