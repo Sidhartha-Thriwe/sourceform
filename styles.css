@@ -1,9 +1,15 @@
 /* Custom styles to complement Tailwind CSS */
+html, body {
+    height: 100vh;
+}
+
 body {
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     font-weight: 600;
+    background-image: linear-gradient(to bottom, #4ee78e, #1fa08f);
+    height: 100vh;
 }
 
 .section {
