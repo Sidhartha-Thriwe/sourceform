@@ -297,16 +297,22 @@
             </div>
         </div>
         <div class="mb-4">
-            <label for="certificateRequired" class="block mb-2">Any Certificate is required for the Client (subject to additional charges)*</label>
-            <select id="certificateRequired" name="certificateRequired" required class="w-full p-2 border rounded">
-                <option value="">No Certificate is required</option>
-                <option value="3 months">1 months</option>
-                <option value="3 months">3 months</option>
-                <option value="6 months">6 months</option>
-                <option value="1 Year">1 Year</option>
-                <option value="2 Year">2 Year</option>
-                <option value="2 Year" selected>Till the program is live</option>
-            </select>
+            <label class="block mb-2">Certificates required by the Client (Subject to additional charges)*</label>
+            <div>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="certificateRequired" value="24 to 48 hours" checked class="form-radio">
+                    <span class="ml-2">None</span>
+                </label>
+                <label class="inline-flex items-center mr-4">
+                    <input type="radio" name="certificateRequired" value="24 to 48 hours" class="form-radio">
+                    <span class="ml-2">VAPT</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="certificateRequired" value="other" class="form-radio">
+                    <span class="ml-2">Other:</span>
+                    <input type="text" id="otherCertificate" name="otherCertificate" class="ml-2 form-input py-1 px-2 text-sm border rounded" placeholder="Any other certificates" disabled>
+                </label>
+            </div>
         </div>
         <div class="mb-4">
             <label for="uploadBenefitPack" class="block mb-2">Upload benefit pack/offer requirements*</label>
@@ -410,7 +416,7 @@
         <div class="mb-4">
             <label for="uploadPnL" class="block mb-2">Upload P&L excel*</label>
             <input type="file" id="uploadPnL" name="uploadPnL" required class="w-full p-2 border rounded">
-            <a href="https://thriweone1-my.sharepoint.com/:x:/g/personal/sidhartha_rajput_thriwe_com/Ee4pZqwRB_hIky1_ODecfTwBa6-bQrUWVL74_KcG409wFA?e=lop9wD" class="text-blue-500 hover:underline" target="_blank">Download sample file</a>
+            <a href="https://thriweone1-my.sharepoint.com/:x:/g/personal/sidhartha_rajput_thriwe_com/EXtqfJcSIz9Nou6Q_YhPZuEBn166Vk8B1OmUKq3ODLGBFQ?e=p3ZqN4" class="text-blue-500 hover:underline" target="_blank">Download sample file</a>
         </div>
         <div class="mb-4">
             <label class="block mb-2">Expected utilization*</label>
